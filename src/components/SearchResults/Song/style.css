@@ -1,0 +1,110 @@
+h2{
+  text-align: center;
+  background-color: #093ea9c9;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main__tabla{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-style: dotted;
+  border-bottom-color: #eae9e9;
+  cursor: pointer;
+  background-color: #FFFEFC;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.25s ease;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.main__detalle{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.number__list{
+  font-size: 35px;
+  color: #dc143c;
+}
+
+.album{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main__artista{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.title__list{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.title__list:last-child{
+  color: rgb(0,64,128);
+}
+
+.artist_list{
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.btn-add{
+  background-color: #007bffca; /* Color de fondo azul */
+  color: #fff;
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+.main__tabla:hover{
+  transform: translate(-5px);
+  background-color: 
+  rgba(255, 255, 0, 0.164);
+}
+.main{
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.album img{
+  width: 120px;
+  height: 100px;
+}
+
+
+a:link, a:visited {
+  background-color: #007bffca;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: rgb(0,64,128);
+}

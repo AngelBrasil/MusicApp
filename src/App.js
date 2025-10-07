@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import { Route, Routes } from 'react-router-dom';
+import SearchBar from './components/SearchBar'
+import SongDetail from './components/SongDetail';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    const [strArtist , setStrArtist] = useState('');
+    const [strTrack , setStrTrack] = useState('');
+ 
+  const handleChildInputChange = (searchArtist) => {
+    setStrArtist(searchArtist);
+  }
+  const handleChildLink = ({strTrack})=>{
+    setStrTrack(strTrack);
+  }
+
+  return(
+    <div className='App'>
+      <Header className='Bibiioteca musical'/>
+        <Routes>
+          <Route path='/' element={<SearchBar onInputChange={handleChildInputChange} onTrack={handleChildLink} strArtist={strArtist}/>}/>
+          <Route path='/song/:idTrack' element={<SongDetail strArtist={strArtist} strTrack={strTrack}/>}></Route>
+        </Routes>
     </div>
   );
 }
